@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="— Edit series.json to set this —" />
+  <title>FC Reader</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="font-md">
+
+<!-- ── MOBILE TOP BAR ──────────────────────────── -->
+<div id="mobile-bar">
+  <div class="mobile-series-title" id="mobile-series-title">Loading…</div>
+  <div class="mobile-controls">
+    <button id="mobile-nav-btn" class="mobile-icon-btn" aria-label="Navigation">☰</button>
+  </div>
+</div>
+
+<!-- Mobile Drawer -->
+<div id="drawer-overlay" class="drawer-overlay"></div>
+<div id="mobile-nav-drawer" class="mobile-drawer nav-drawer">
+  <div class="sidebar-header">
+    <div class="archive-badge" id="mobile-badge"></div>
+    <div class="series-title" id="mobile-series-header"></div>
+    <div class="series-subtitle" id="mobile-series-sub"></div>
+  </div>
+  <div class="book-nav" id="mobile-book-nav-list"></div>
+  <div class="chapter-nav-wrap">
+    <div class="chapter-nav-label">Chapters</div>
+    <div id="mobile-chapter-nav-list"></div>
+  </div>
+</div>
+
+<!-- ── MAIN APP ─────────────────────────────────── -->
+<div id="app">
+
+  <!-- LEFT SIDEBAR -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="archive-badge" id="sidebar-badge"></div>
+      <div class="series-title" id="sidebar-series-title"></div>
+      <div class="series-subtitle" id="sidebar-series-sub"></div>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="book-nav" id="book-nav-list"></div>
+    <div class="chapter-nav-wrap" id="chapter-nav-wrap">
+      <div class="chapter-nav-label">Chapters</div>
+      <div id="chapter-nav-list">
+        <div class="chapter-nav-item" style="cursor:default;color:var(--text-dim)">Open a book to navigate</div>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="reading-stats">
+        <span>Progress: <span id="reading-stat-current">0%</span></span>
+        <span>ERT: <span id="reading-stat-total">—</span></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CENTER READING PANEL -->
+  <main id="reader-panel">
+    <div class="reader-topbar">
+      <div class="topbar-location" id="topbar-location"></div>
+      <div class="topbar-controls">
+        <button class="topbar-btn" id="font-decrease">A−</button>
+        <button class="topbar-btn" id="font-increase">A+</button>
+        <button class="topbar-btn" id="prev-btn">← PREV</button>
+        <button class="topbar-btn" id="next-btn">NEXT →</button>
+      </div>
+    </div>
+
+    <div id="loading-state" style="display:none;">
+      <div class="loading-icon"></div>
+      <div class="loading-text">Retrieving file…</div>
+    </div>
+
+    <!-- Welcome screen -->
+    <div id="welcome-screen" style="display:none;">
+      <div class="welcome-eyebrow" id="welcome-eyebrow"></div>
+      <div class="welcome-title" id="welcome-title"></div>
+      <div class="welcome-tagline" id="welcome-tagline"></div>
+      <div class="welcome-divider"></div>
+      <div class="welcome-synopsis" id="welcome-synopsis"></div>
+      <div class="welcome-series-grid" id="welcome-series-grid"></div>
+      <button class="welcome-begin-btn" id="welcome-begin-btn">BEGIN READING</button>
+    </div>
+
+    <!-- Book content -->
+    <div id="book-content" style="display:none;">
+      <div class="book-header" id="book-header"></div>
+      <div class="reading-content" id="reading-content">
+        <div class="book-text" id="book-text"></div>
+      </div>
+      <div style="padding:0 40px 60px;max-width:760px;margin:0 auto;">
+        <div style="border-top:1px solid var(--border);padding-top:32px;display:flex;justify-content:space-between;align-items:center;">
+          <button class="topbar-btn" id="prev-book-btn" style="padding:10px 20px;">← Previous</button>
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;" id="footer-tagline"></div>
+          <button class="topbar-btn" id="next-book-btn" style="padding:10px 20px;">Next →</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
