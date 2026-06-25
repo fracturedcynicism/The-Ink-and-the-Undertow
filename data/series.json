@@ -1,37 +1,21 @@
 {
   "series": {
-    "title": "THE SANDHYA CYCLE",
+    "title": "The Ink & the Undertow",
     "subtitle": "Fractured Cynicism",
-    "tagline": "A series spanning over timelines with noir , cosmic horror and cyberpunk",
-    "badge": "Series",
-    "synopsis": "A series spanning over timelines with noir , cosmic horror and cyberpunk",
+    "tagline": "Perfect mathematics.",
+    "badge": "Pulpy classic noir novel",
+    "synopsis": "Colonial injustice births fingerprinting.",
     "accentColor": "#C8832A",
     "accentDim": "#7A4E18"
   },
   "books": [
     {
       "id": 1,
-      "slug": "Sandhya cycle 1",
-      "title": "ASHES OF THE THIRTEENTH YEAR",
+      "slug": "The Ink & the Undertow",
+      "title": "The Ink and the undertow",
       "subtitle": "Novel",
-      "file": "books/Sandhya cycle 1 ASHES OF THE THIRTEENTH YEAR.txt",
-      "setting": "Vedic India"
-    },
-        {
-      "id": 2,
-      "slug": "Sandhya cycle 2",
-      "title": "VENOM OF THE AGE",
-      "subtitle": "Novel",
-      "file": "books/Sandhya cycle 2 VENOM OF THE AGE.txt",
-      "setting": "Vedic India"
-    },
-        {
-      "id": 3,
-      "slug": "Sandhya cycle 3",
-      "title": "THE TORTOISE BACK",
-      "subtitle": "Novel",
-      "file": "books/Sandhya cycle 3 THE TORTOISE BACK.txt",
-      "setting": "Future"
+      "file": "books/Ink and the undertow.txt",
+      "setting": "Colonial to modern India"
     }
   ]
 }
